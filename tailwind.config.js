@@ -8,15 +8,22 @@ module.exports = {
     './app/assets/stylesheets/**/*.css',
     './app/views/**/*.{html,html.erb,erb}',
     './app/javascript/components/**/*.js',
+    "./app/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     fontFamily: {
-      'sans': ["BlinkMacSystemFont", "Avenir Next", "Avenir",
-        "Nimbus Sans L", "Roboto", "Noto Sans", "Segoe UI", "Arial", "Helvetica",
-        "Helvetica Neue", "sans-serif"],
-      'mono': ["Consolas", "Menlo", "Monaco", "Andale Mono", "Ubuntu Mono", "monospace"]
+      'circular': ["CircularStd-Black", "sans-serif"],
+      'inter': ["Inter-Regular", "sans-serif"],
+    },
+    colors: {
+      'radical' : '#ff365e',
+      'radical-hvr' : '#FF476C',
+      'white' : '#ffffff',
+      'black' : '#000000',
     },
     extend: {
+      defaultTheme,
+      colors
     },
   },
   corePlugins: {

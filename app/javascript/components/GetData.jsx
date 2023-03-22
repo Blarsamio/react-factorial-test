@@ -1,18 +1,12 @@
 import React from 'react';
-
-const App = () => {
+const GetData = () => {
   const [data, setData] = React.useState([]);
   React.useEffect(() => {
-    fetch('/api/v1/metrics')
+    fetch('/json')
     .then((res) => res.json())
     .then((data) => setData(data));
   }, []);
-  return (
-    <div>
-      Metrics
-      {data.map(({name}) => <div>{name}</div>)}
-    </div>
-  );
-};
+  return data;
+}
 
-export default App;
+export default GetData;

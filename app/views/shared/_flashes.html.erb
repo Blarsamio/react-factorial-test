@@ -1,0 +1,25 @@
+<% if notice %>
+  <div class="bg-radical text-white rounded-md px-4 py-3 mb-2 flex items-center justify-between" role="alert">
+    <%= notice %>
+    <button type="button" class="ml-2 mb-1 rounded-md text-blue-500 hover:text-blue-700 focus:outline-none focus:shadow-outline-blue active:text-blue-800 transition duration-150 ease-in-out" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+<% end %>
+<% if alert %>
+  <div class="bg-radical text-white rounded-md px-4 py-3 mb-2 flex items-center justify-between" role="alert">
+    <%= alert %>
+    <button type="button" class="ml-2 mb-1 rounded-md text-white hover:text-black focus:outline-none focus:shadow-outline-yellow active:text-black transition duration-150 ease-in-out" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+<% end %>
+
+<script>
+  const closeButtons = document.querySelectorAll('[aria-label="Close"]');
+  closeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      button.parentNode.remove();
+    });
+  });
+</script>

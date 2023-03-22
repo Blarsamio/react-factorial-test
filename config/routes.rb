@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  root 'home#index'
-  namespace :api do
-    namespace :v1 do
-      resources :metrics, only: [:index]
-    end
-  end
+  root 'metrics#index'
+  resources :metrics
+  get 'json', to: 'metrics#json'
+  get 'monthly_average', to: 'metrics#monthly_average'
+  get 'daily_average', to: 'metrics#daily_average'
+  get 'weekly_average', to: 'metrics#weekly_average'
+  get 'yearly_average', to: 'metrics#yearly_average'
 end

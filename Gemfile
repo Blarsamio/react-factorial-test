@@ -73,3 +73,11 @@ gem "vite_rails"
 
 # Can be used in plain Rack apps, and is all you need when using HTML entrypoints
 gem "vite_ruby"
+
+gem 'faker'
+
+gem 'react-rails'
+
+gem 'simple_form'
+
+gem "groupdate"
