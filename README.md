@@ -32,8 +32,8 @@ $ cd react-factorial-test
 $ bundle install
 $ npm install
 $ bundle exec vite install
--- if you encounter any compatibility issue between vite-ruby and vite-plugin-ruby run the following command :
- -- $ bundle exec vite upgrade
+*** (if you encounter any compatibility issue between vite-ruby and vite-plugin-ruby run the following command :
+   $ bundle exec vite upgrade ) *** 
 
 # Get the Database up and seeded
 $ rails db:create
