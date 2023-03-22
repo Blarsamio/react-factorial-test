@@ -3,8 +3,8 @@
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
-  <a href="#download">Download</a> •
   <a href="#credits">Credits</a> •
+  <a href="https://open.spotify.com/playlist/0B7DfeVTVGV5JVclOmv9f3?si=8070f76d5a7941d7">Music I used for coding this</a>
 </p>
 
 
