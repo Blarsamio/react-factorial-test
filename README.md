@@ -56,6 +56,8 @@ This website uses the following open source packages:
 - [faker](https://github.com/faker-ruby/faker)
 - [SimpleForm](https://github.com/heartcombo/simple_form)
 - [GroupDate](https://github.com/ankane/groupdate)
+- [FusionCharts](https://www.fusioncharts.com/) --(not so open source)
+- [ReactFusionCharts](https://www.npmjs.com/package/react-fusioncharts)
 
 ## Support 
 
