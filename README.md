@@ -1,25 +1,68 @@
-# README
+<h1 align="center">A minimal metric visualization tool</h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#credits">Credits</a> •
+  <a href="https://open.spotify.com/playlist/0B7DfeVTVGV5JVclOmv9f3?si=8070f76d5a7941d7">Music I used for coding this</a>
+</p>
 
-Things you may want to cover:
 
-* Ruby version
+## Key Features
 
-* System dependencies
+* LivePreview - Make changes, See changes
+  - Instantly see your changes reflected in the chart.
+* You can get the average of sales per user using year, month and day constrains
+* You can create a new metric and see it instantly.
+* Sidemenu to show the list of all metrics available
+* Ability to select, deselect salesperson from the chart
 
-* Configuration
+## How To Use
 
-* Database creation
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
-* Database initialization
+```bash
+# Clone this repository
+$ gh repo clone Blarsamio/react-factorial-test
 
-* How to run the test suite
+# Go into the repository
+$ cd react-factorials-test
 
-* Services (job queues, cache servers, search engines, etc.)
+# Install dependencies
+$ bundle
+$ npm install
 
-* Deployment instructions
+# Get the Database up and seeded
+$ rails db:create
+$ rails db:migrate
+$ rails db:seed
 
-* ...
-# react-factorial-test
+# Build the app 
+$ vite build
+
+# Run the app
+$ bin/dev
+```
+
+## Credits
+
+This website uses the following open source packages:
+
+- [TailwindCSS](https://tailwindcss.com/)
+- [Node.js](https://nodejs.org/)
+- [React](https://es.reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [ViteRuby](https://vite-ruby.netlify.app/guide/rails.html)
+- [faker](https://github.com/faker-ruby/faker)
+- [SimpleForm](https://github.com/heartcombo/simple_form)
+- [GroupDate](https://github.com/ankane/groupdate)
+
+## Support 
+
+All my family and friends :)
+
+## License
+
+MIT(not really)
+
+---
