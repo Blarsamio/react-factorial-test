@@ -1,4 +1,4 @@
-<h4 align="center">A minimal metric visualization tool</h4>
+<h1 align="center">A minimal metric visualization tool</h1>
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
