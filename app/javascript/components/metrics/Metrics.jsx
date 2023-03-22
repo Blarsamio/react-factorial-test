@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import MetricsList from './MetricsList';
-import Chart from '../chort/Chart';
 
 const Metrics = (props) => {
   return (

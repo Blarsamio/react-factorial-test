@@ -26,7 +26,10 @@ function MetricForm() {
     })
       .then(response => response.json())
       .then(data => {
-        console.log(data);
+        location.reload();
+        const alert = document.getElementById("alert");
+        alert.classList.remove("hidden");
+        alert.insertAdjacentHTML("afterbegin", "Metric created successfully!");
         // handle successful form submission
       })
       .catch(error => console.error(error));
@@ -46,7 +49,8 @@ function MetricForm() {
 
   return (
     <form onSubmit={handleSubmit} className = "flex flex-row mt-20 w-full h-20 px-3 justify-between overflow-hidden">
-        <select value={name} onChange={handleNameChange} className="text-gray-400 h-10 self-center" placeholder="John">
+        <select value={name} onChange={handleNameChange} className="text-gray h-10 self-center">
+          <option className="text-radical" value="" disabled  hidden>Choose...</option>
           <option value="Ben">Ben</option>
           <option value="Camila">Camila</option>
           <option value="Pato">Pato</option>
@@ -55,7 +59,7 @@ function MetricForm() {
       <br />
 
         <input
-          className="text-black placeholder:text-gray-400 h-10 self-center"
+          className="text-black placeholder:text-gray h-10 self-center"
           type="number"
           value={value}
           onChange={handleValueChange}
@@ -65,7 +69,7 @@ function MetricForm() {
         />
       <br />
 
-        <input className="text-gray-400 h-10 self-center" type="date" value={date} onChange={handleDateChange} required />
+        <input className="text-gray h-10 self-center" type="date" value={date} onChange={handleDateChange} required />
       <br />
       <button type="submit" className="btn2 w-40 mt-0 h-10 bg-radical hover:text-white self-center">Submit</button>
     </form>

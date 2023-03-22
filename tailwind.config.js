@@ -22,7 +22,7 @@ module.exports = {
       'black' : '#000000',
       'white' : '#ffffff',
       'black' : '#000000',
-      'gray' : '#f5f5f5'
+      'gray' : '#3d3d3d'
     },
     extend: {
       defaultTheme,
