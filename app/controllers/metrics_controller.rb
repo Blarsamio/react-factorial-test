@@ -20,7 +20,6 @@ class MetricsController < ApplicationController
 
   def create
     @metric = Metric.new(metric_params)
-
     if @metric.save
       render json: { status: :created, notice: "Metric created successfully" }
     else

@@ -20,10 +20,12 @@ module.exports = {
       'radical-hvr' : '#FF476C',
       'white' : '#ffffff',
       'black' : '#000000',
+      'white' : '#ffffff',
+      'black' : '#000000',
+      'gray' : '#f5f5f5'
     },
     extend: {
       defaultTheme,
-      colors
     },
   },
   corePlugins: {
