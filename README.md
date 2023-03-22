@@ -26,10 +26,10 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 $ gh repo clone Blarsamio/react-factorial-test
 
 # Go into the repository
-$ cd react-factorials-test
+$ cd react-factorial-test
 
 # Install dependencies
-$ bundle
+$ bundle install
 $ npm install
 
 # Get the Database up and seeded
@@ -56,6 +56,8 @@ This website uses the following open source packages:
 - [faker](https://github.com/faker-ruby/faker)
 - [SimpleForm](https://github.com/heartcombo/simple_form)
 - [GroupDate](https://github.com/ankane/groupdate)
+- [FusionCharts](https://www.fusioncharts.com/) --(not so open source)
+- [ReactFusionCharts](https://www.npmjs.com/package/react-fusioncharts)
 
 ## Support 
 
