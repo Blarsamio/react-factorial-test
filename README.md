@@ -31,6 +31,7 @@ $ cd react-factorial-test
 # Install dependencies
 $ bundle install
 $ npm install
+$ bundle exec vite install
 
 # Get the Database up and seeded
 $ rails db:create
