@@ -1,11 +1,14 @@
 import React, { useState, useRef } from "react";
 import { Transition } from "@headlessui/react";
 import { MenuIcon, XIcon} from "@heroicons/react/outline";
-import MetricForm from "../Form";
+import Metrics from "../metrics/Metrics";
+import GetData from "../utility/GetData";
 
 function RightMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef();
+  const data = GetData();
+
 
   return (
     <div className="relative">
@@ -55,12 +58,12 @@ function RightMenu() {
             className="fixed top-0 right-0 z-50 w-64 h-screen bg-white border-radical border-2 shadow-xl"
           >
             <div className="flex items-center justify-between px-4 py-3 bg-radical mt-2">
-              <h2 className="text-lg font-medium text-white mt-3">Menu</h2>
+              <h2 className="text-lg font-medium text-white mt-2">Menu</h2>
 
             </div>
             <div className="py-4 px-4">
               <nav className="space-y-3">
-                <MetricForm />
+                <Metrics items={data} />
               </nav>
             </div>
           </div>

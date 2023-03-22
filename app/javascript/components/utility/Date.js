@@ -1,7 +1,6 @@
 export const formatDate = (date) =>
   new Date(date).toLocaleString("en-GB", {
-    month: "long",
-    weekday: "long",
+    month: "short",
     day: "numeric",
     year: "numeric",
   });

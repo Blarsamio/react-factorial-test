@@ -63,7 +63,6 @@ button:hover p {
   margin: 0em 0.8em;
   color: #ff365e;
   border: none;
-  margin-top: 1em;
   transition: all 350ms ease-in-out;
   border-radius: 0.5em;
 }

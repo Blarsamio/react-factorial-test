@@ -74,10 +74,11 @@ gem "vite_rails"
 # Can be used in plain Rack apps, and is all you need when using HTML entrypoints
 gem "vite_ruby"
 
+# Using faker to generate the seed data for this project
 gem 'faker'
 
-gem 'react-rails'
-
+# Using simple_form to generate the forms
 gem 'simple_form'
 
+#Groupdate allows to group by date, time, or datetime fields in ActiveRecord
 gem "groupdate"
