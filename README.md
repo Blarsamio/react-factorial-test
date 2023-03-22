@@ -26,10 +26,10 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 $ gh repo clone Blarsamio/react-factorial-test
 
 # Go into the repository
-$ cd react-factorials-test
+$ cd react-factorial-test
 
 # Install dependencies
-$ bundle
+$ bundle install
 $ npm install
 
 # Get the Database up and seeded
