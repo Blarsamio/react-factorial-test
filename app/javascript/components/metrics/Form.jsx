@@ -30,7 +30,7 @@ function MetricForm() {
         const alert = document.getElementById("alert");
         alert.classList.remove("hidden");
         alert.insertAdjacentHTML("afterbegin", "Metric created successfully!");
-        // handle successful form submission
+        // handle successful form submissionmt
       })
       .catch(error => console.error(error));
   };
@@ -48,7 +48,7 @@ function MetricForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className = "flex flex-row mt-20 w-full h-20 px-3 justify-between overflow-hidden">
+    <form onSubmit={handleSubmit} className = "flex flex-row mt-2 w-full h-20 px-3 justify-between overflow-hidden">
         <select value={name} onChange={handleNameChange} className="text-gray h-10 self-center">
           <option className="text-radical" value="" disabled  hidden>Choose...</option>
           <option value="Ben">Ben</option>

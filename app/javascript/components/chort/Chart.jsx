@@ -4,17 +4,19 @@ import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
 import FusionCharts from 'fusioncharts';
 import Column2D from 'fusioncharts/fusioncharts.charts';
 import Charts from 'fusioncharts/fusioncharts.charts';
-import UserAvg from './Averages';
+import { UserAvg, YearlyAverage } from './Averages';
 
 
 ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme);
 Charts(FusionCharts);
 
 const chartComponent = () => {
-  const patoMonth = UserAvg("Pato", "monthly");
-  const benMonth = UserAvg("Ben", "monthly");
-  const camilaMonth = UserAvg("Camila", "monthly");
-  const santiMonth = UserAvg("Santi", "monthly");
+  const [year, setYear] = React.useState(2020);
+
+  const patoMonth = YearlyAverage("Pato", "monthly", year);
+  const benMonth = YearlyAverage("Ben", "monthly", year);
+  const camilaMonth = YearlyAverage("Camila", "monthly", year);
+  const santiMonth = YearlyAverage("Santi", "monthly", year);
 
   const patoDay = UserAvg("Pato", "daily");
   const benDay = UserAvg("Ben", "daily");
@@ -26,6 +28,10 @@ const chartComponent = () => {
   const camilaYear = UserAvg("Camila", "yearly");
   const santiYear = UserAvg("Santi", "yearly");
 
+  const changeYearlyData = () => {
+    const randomYear = Math.floor(Math.random() * 4) + 2020; // generates a random year between 2020 and 2023
+    setYear(randomYear);
+  };
 
   const monthlyCategories = [
     {
@@ -144,10 +150,11 @@ const chartComponent = () => {
         "showToolTip": "1",
         "decimals": "2",
       },
-      "categories": dailyCategories,
-      "dataset": dailyDataset,
+      "categories": monthlyCategories,
+      "dataset": monthlyDataset,
     }
   }
+
 
   class Chart extends Component {
     constructor(props) {
@@ -191,7 +198,7 @@ const chartComponent = () => {
       return (
         <div className='self-center w-full h-full flex flex-col'>
           <ReactFC {...this.state} className="self-center" />
-          <center className='flex flex-row justify-between'>
+          <center className='flex flex-row justify-between mb-3'>
             <button
               className='btn1'
               onClick={this.updateDaily}
@@ -213,6 +220,9 @@ const chartComponent = () => {
               <p>Change to Yearly Avg</p>
             </button>
           </center>
+           { this.state.dataSource.categories[0].category[0].label === "Jan" ? (
+            <button className='btn2 w-52 self-center' onClick={changeYearlyData}><p>Change Year: {year}</p></button>
+            ) : null }
         </div>
       );
     }

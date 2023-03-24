@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Transition } from "@headlessui/react";
-import { MenuIcon, XIcon} from "@heroicons/react/outline";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Metrics from "../metrics/Metrics";
 import GetData from "../utility/GetData";
 
@@ -32,16 +32,13 @@ function RightMenu() {
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
       >
-        {(divRef) => (
-          <div
-            ref={ref}
-            className="fixed inset-0 z-40"
-            onClick={() => setIsOpen(false)}
-          >
-            <div className="absolute inset-0 bg-gray-600 opacity-75"></div>
-          </div>
-        )}
-      </Transition>
+      <div
+        ref={ref}
+        className="fixed inset-0 z-40"
+        onClick={() => setIsOpen(false)}
+      >
+          <div className="absolute inset-0 bg-gray-600 opacity-75"></div>
+        </div>      </Transition>
 
       <Transition
         show={isOpen}
@@ -52,13 +49,12 @@ function RightMenu() {
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
       >
-        {(divRef) => (
           <div
             ref={ref}
             className="fixed top-0 right-0 z-50 w-64 h-screen bg-white border-radical border-2 shadow-xl"
           >
-            <div className="flex items-center justify-between px-4 py-3 bg-radical mt-2">
-              <h2 className="text-lg font-medium text-white mt-2">Menu</h2>
+            <div className="flex items-center justify-between px-4 py-3 bg-radical">
+              <h2 className="text-lg font-medium text-white">Menu</h2>
 
             </div>
             <div className="py-4 px-4">
@@ -67,7 +63,6 @@ function RightMenu() {
               </nav>
             </div>
           </div>
-        )}
       </Transition>
     </div>
   );
